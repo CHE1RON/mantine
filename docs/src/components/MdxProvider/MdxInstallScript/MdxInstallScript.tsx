@@ -14,6 +14,7 @@ export function MdxInstallScript({ packages, dev }: MdxInstallScriptProps) {
   return (
     <MdxNpmScript
       yarnScript={`yarn add ${dev ? '--dev ' : ''}${packages}`}
+      pnpmScript={`pnpm install ${dev ? '--dev ' : ''}${packages}`}
       npmScript={`npm install ${dev ? '--save-dev ' : ''}${packages}`}
     />
   );
